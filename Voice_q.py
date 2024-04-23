@@ -23,7 +23,7 @@ def get_field_condition():
         if not field_data.get('Crops', ''):
             return "No harvestable crops available for the Season"
         else:
-            return f"Your Field Condition:\n\nCrops: {field_data.get('Crops', '')}\nDays to Maturity: {field_data.get('Days to Maturity', '')}\nHumidity (%): {field_data.get('Humidity (%)', '')}\nIndia Growing Season: {field_data.get('India Growing Season', '')}\nPH Value: {field_data.get('PH Value', '')}\nSoil Moisture (%): {field_data.get('Soil Moisture (%)', '')}\nTemperature (in Cel): {field_data.get('Temperature (in Cel)', '')}"
+            return f"Your Field Condition:\n\nCrops: {field_data.get('Crops', '')}\nDays to Maturity: {field_data.get('Days to Maturity', '')}\nHumidity (%): {field_data.get('Humidity (%)', '')}\nIndia Growing Season: {field_data.get('India Growing Season', '')}\nPH Value: {field_data.get('PH Value', '')}\nSoil Moisture (%): {field_data.get('Soil Moisture (%)', '')}\nTemperature (in Cel): {field_data.get('Temperature(in Cel)', '')}"
     else:
         return "Field condition data not available."
 
