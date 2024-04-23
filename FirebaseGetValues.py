@@ -25,10 +25,6 @@ if doc.exists:
         temperature = float(temperature_str)
         ph = float(ph_str)
         moisture = abs(float(moisture_str))
-        print(f"Humidity: {humidity}")
-        print(f"Temperature: {temperature}")
-        print(f"Ph: {ph}")
-        print(f"Moisture: {moisture}")
     except ValueError:
         print("Error: Unable to convert string values to floats.")
 else:
