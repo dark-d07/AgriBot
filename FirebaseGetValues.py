@@ -24,8 +24,7 @@ if doc.exists:
         humidity = float(humidity_str)
         temperature = float(temperature_str)
         ph = float(ph_str)
-        moisture = float(moisture_str)
-        moisture = -1*moisture
+        moisture = abs(float(moisture_str))
         print(f"Humidity: {humidity}")
         print(f"Temperature: {temperature}")
         print(f"Ph: {ph}")
