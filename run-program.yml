@@ -25,10 +25,10 @@ jobs:
 
       - name: Authenticate with Firebase
         run: |
-          echo "$FIREBASE_CREDENTIALS" > firebase-adminsdk.json
+          echo "${{ secrets.FIREBASE_CREDENTIALS }}" > firebase-adminsdk.json
           firebase login --no-localhost
-          firebase use --add "$PROJECT_ID"
+          firebase use --add "agribot-d56f2"
 
       - name: Run Python script
         run: |
-          python path/to/your_script.py  # Specify the path to your Python script
+          python Voice_q.py  # Specify the path to your Python script
