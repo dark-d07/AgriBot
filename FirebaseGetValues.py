@@ -25,6 +25,7 @@ if doc.exists:
         temperature = float(temperature_str)
         ph = float(ph_str)
         moisture = abs(float(moisture_str))
+        print("Recieved Data From the database")
     except ValueError:
         print("Error: Unable to convert string values to floats.")
 else:
