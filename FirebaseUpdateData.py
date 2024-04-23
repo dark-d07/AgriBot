@@ -24,12 +24,12 @@ db = firestore.client(app=app)
 if df.loc[index_temperature, 'India Growing Season'].find(month) != -1: 
     data = {
         "Crops": df.loc[index_temperature, 'Crops'],
-        "Temperature(in Cel)": df.loc[index_temperature, 'Temperature(in Cel)'],
+        "Temperature(in Cel)": df.loc[index_temperature, 'Temperature(in Cel)'].round(2),
         "India Growing Season": df.loc[index_temperature, 'India Growing Season'],
         "Days to Maturity": df.loc[index_temperature, 'Days to Maturity'],
-        "Humidity (%)": df.loc[index_temperature, 'Humidity (%)'],
-        "PH Value": df.loc[index_temperature, 'PH Value'],
-        "Soil Moisture (%)": df.loc[index_temperature, 'Soil Moisture (%)']
+        "Humidity (%)": df.loc[index_temperature, 'Humidity (%)'].round(2),
+        "PH Value": df.loc[index_temperature, 'PH Value'].round(2),
+        "Soil Moisture (%)": df.loc[index_temperature, 'Soil Moisture (%)'].round(2)
     }
     
     document_id = "AgriBotDataUpdate1"
