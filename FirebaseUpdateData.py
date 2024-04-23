@@ -34,7 +34,7 @@ if df.loc[index_temperature, 'India Growing Season'].find(month) != -1:
     
     document_id = "AgriBotDataUpdate1"
     db.collection("AgriBot").document(document_id).set(data)
-    print("Data added/updated successfully!")
+    print("Data updated successfully!")
 else:
     print("No harvestable crops available for the Season.")
 
