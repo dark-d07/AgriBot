@@ -9,8 +9,8 @@ except ValueError:
     app = firebase_admin.initialize_app(cred, name="myApp")
 
 db = firestore.client(app=app)
-document_id = "AgriBotDataUpdate"
-doc_ref = db.collection("AgriBot").document(document_id)
+document_id = "data"
+doc_ref = db.collection("sensors").document(document_id)
 doc = doc_ref.get()
 
 if doc.exists:
