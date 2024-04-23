@@ -30,9 +30,9 @@ def get_field_condition():
 def get_answer(question, sample_data):
     if question in sample_data:
         return sample_data[question]
-    elif question.casefold() == "what is my field condition?":
+    elif question.casefold() == "what is my field condition"||"what is my field condition?":
         return get_field_condition()
-    elif question.casefold() == "what crop can i harvest this season?": 
+    elif question.casefold() == "what crop can i harvest this season?"||"what crop can i harvest this season": 
         doc_ref = db.collection("AgriBot").document("AgriBotDataUpdate1")
         doc = doc_ref.get()
         if doc.exists:
