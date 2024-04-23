@@ -37,7 +37,7 @@ def get_answer(question, sample_data):
         doc = doc_ref.get()
         if doc.exists:
             field_data = doc.to_dict()
-            return f"You can harvest the \n\n{field_data.get('Crops', '')} for this season of the month {datetime.now().strftime('%B')}"
+            return f"You can harvest the {field_data.get('Crops', '')} for this season of the month {datetime.now().strftime('%B')}"
         else:
             return "Field condition data not available."
     else:
