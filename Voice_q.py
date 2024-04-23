@@ -62,7 +62,7 @@ def receive_and_send_data():
     # Update the Firestore database with the answer
     document_id = "Answer"
     doc_ref = db.collection("AgriBot").document(document_id)
-    doc_ref.set({"Question": received_question, "answer": answer})
+    doc_ref.set({"Question": received_question, "Answer": answer})
 
     print("Data sent to Firestore successfully.")
 
